@@ -7,7 +7,8 @@ COPY . .
 RUN npm run build
 
 # Production stage
-FROM nginx:latest  
+FROM nginx:stable
+  
 # RUN apk update && apk upgrade libxml2
 RUN set -eux; \
     apk --no-cache add bash && \
